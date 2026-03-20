@@ -2,7 +2,7 @@
 Data Bootcamp Midterm EDA
 What determines the spread between Brent and WTI?  
 
-Introduction 
+**Introduction**
 
 Crude oil is one of the most important commodities in global financial markets, and two benchmarks dominate pricing: West Texas Intermediate (WTI) and Brent crude oil. WTI is primarily used as a benchmark in the United States, while Brent serves as the global benchmark, particularly in Europe and international markets. Although these two benchmarks generally move closely together due to shared macroeconomic drivers, their price spread (Brent − WTI) can vary significantly over time. 
 
@@ -10,7 +10,7 @@ Understanding the dynamics of this spread is important for several reasons. Firs
 
 The objective of this project is to conduct an exploratory data analysis (EDA) of Brent and WTI crude oil prices using historical data obtained from the Federal Reserve Economic Data (FRED) API. Specifically, my analysis aims to (1) examine how crude oil prices have evolved over time, (2) analyze the behavior of the Brent–WTI spread, (3) investigate volatility patterns and extreme events, (4) evaluate the correlation between the two benchmarks, and (5) identify seasonal patterns in returns.  
 
-Methodology 
+**Methodology**
 
 The data used in this analysis was obtained from the FRED API, which provides daily spot prices for both WTI and Brent crude oil. The specific series used were DCOILWTICO for WTI and DCOILBRENTEU for Brent, both measured in U.S. dollars per barrel. The dataset spans from January 2000 through early 2026, providing over two decades of observations.  
 
@@ -28,7 +28,7 @@ Finally, a volatility regime indicator was created by identifying periods where 
 
 The limitations of my project also need to be mentioned. Firstly, FRED provides spot price data, not futures curves, so it reflects current market conditions rather than forward-looking expectations or risk premiums. There’s no adjustment for inflation or currency effects. Also, my analysis is purely descriptive (no predictive modeling). And another big piece I’ve mentioned was the forward-fill, which assumes price continuity across non-trading days.  
 
-Exploratory Analysis 
+**Exploratory Analysis**
 
 The time series of crude oil prices reveals several important patterns. Brent and WTI prices generally track each other closely, confirming that they are driven by similar underlying economic forces. However, there are notable periods where prices diverge or exhibit extreme behavior. For example, both benchmarks experienced a sharp rise leading up to the 2008 financial crisis, followed by a dramatic collapse. Another significant disruption occurred in 2020 during the COVID-19 pandemic, when demand shocks and storage constraints caused unprecedented market conditions. Notably, WTI prices briefly turned negative during this period, reflecting the cost of storage exceeding the value of the commodity itself. The transportation sector drives demand for refined petroleum products (e.g., gasoline, diesel, jet fuel), which dropped during the lockdown. I highlight COVID as it was a unique point in history during which humans demanded 30% less oil/gas.  Brent is seaborne so I suspect storage wasn’t as difficult as with WTI. 
 
@@ -44,7 +44,7 @@ Seasonality analysis, based on grouping returns by month, suggests that there is
 
 Finally, the identification of high-volatility regimes shows that periods of market stress are not isolated events but tend to cluster over time. This reinforces the idea that financial markets exhibit persistent periods of instability, rather than purely random fluctuations. 
 
-Conclusion 
+**Conclusion**
 
 So how have crude prices changed over time? There is no one-way ticket, but it has largely been up and to the right—as one would expect—due to our increased demand for oil and gas over time. This is attributed to technological developments and globalization, all of which require fuel to be sustained.   
 
@@ -54,11 +54,11 @@ Volatility and correlation both play crucial roles in understanding this relatio
 
 The COVID-19 pandemic stands out as the most extreme event in the dataset, producing unprecedented volatility and a temporary decoupling of prices. This highlights the importance of considering rare but impactful events when analyzing financial markets. 
 
-Motivation 
+**Motivation**
 
 During an interview, I mentioned that I have a background in commodities (I was an accounting intern at an oil company last summer, and my family is from an oil rich country). He asked me “wow...so what do you think about the spread between WTI and Brent?” I didn’t know how to answer and just said “Oh I mostly follow crude price action.” Which, in hindsight, is just about the stupidest answer I could have given...no really, it would have been better to just say “I don’t know.” Anyway, I thought I’d take this as an opportunity to formally figure out the answer to that one.   
 
-Appendix  
+**Appendix**
 
 [Current Brent-WTI spread (interesting time to be doing this project) 
 ](https://www.reuters.com/business/energy/us-oil-exports-seen-rising-wti-discount-brent-hits-widest-11-years-2026-03-18/)
@@ -74,4 +74,4 @@ Appendix
 
 https://oilprice.com/    
 
-I'd also like to add that the app.py was my attempt to use streamlit to create an interactive website/app related to my data. It's pretty elementary and I needed A LOT of help with it, so honestly it should probably be discarded, which is why I include its description very briefly here in the appendix. Maybe 20% of it was of my own doing. The rest was help from my brother + ChatGPT.  
+I'd also like to add that the app.py was my attempt to use streamlit to create an interactive website/app related to my data. It's pretty elementary and I needed **A LOT** of help with it, so honestly it should probably be discarded, which is why I include its description very briefly here in the appendix. Maybe 20% of it was of my own doing. The rest was help from my brother + ChatGPT.  
