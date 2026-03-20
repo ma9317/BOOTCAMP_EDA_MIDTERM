@@ -1,6 +1,7 @@
 # BOOTCAMP_EDA
-Data Bootcamp Midterm EDA
-What determines the spread between Brent and WTI?  
+Data Bootcamp Midterm EDA -- Mais Adwal 
+
+**What determines the spread between Brent and WTI?**
 
 **Introduction**
 
