@@ -67,8 +67,11 @@ Current Brent-WTI spread (interesting time to be doing this project)
 
 
 [FRED API Version 2 ](https://fred.stlouisfed.org/docs/api/fred/ )
+
 [FRED WTI series ](https://fred.stlouisfed.org/series/DCOILWTICO)
+
 [FRED Brent series ](https://fred.stlouisfed.org/series/DCOILBRENTEU)
+
 https://oilprice.com/    
 
  
