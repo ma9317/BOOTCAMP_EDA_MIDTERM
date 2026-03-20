@@ -60,8 +60,8 @@ During an interview, I mentioned that I have a background in commodities (I was 
 
 Appendix  
 
-Current Brent-WTI spread (interesting time to be doing this project) 
-
+[Current Brent-WTI spread (interesting time to be doing this project) 
+](https://www.reuters.com/business/energy/us-oil-exports-seen-rising-wti-discount-brent-hits-widest-11-years-2026-03-18/)
  
 
 
