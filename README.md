@@ -75,4 +75,4 @@ During an interview, I mentioned that I have a background in commodities (I was 
 
 https://oilprice.com/    
 
-I'd also like to add that the app.py was my attempt to use streamlit to create an interactive website/app related to my data. It's pretty elementary and I needed **A LOT** of help with it, so honestly it should probably be discarded, which is why I include its description very briefly here in the appendix. Maybe 20% of it was of my own doing. The rest was help from my brother + ChatGPT.  
+I'd also like to add that the app.py was my attempt to use streamlit to create an interactive website/app related to my data. It's pretty elementary and I needed **A LOT** of help with it, so honestly it should be taken with a grain of salt, which is why I include its description very briefly here in the appendix. I got a lot of help from my brother + the internet.  
