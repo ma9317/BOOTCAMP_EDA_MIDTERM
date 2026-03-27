@@ -13,7 +13,7 @@ The objective of this project is to conduct an exploratory data analysis (EDA) o
 
 **Methodology**
 
-The data used in this analysis was obtained from the FRED API, which provides daily spot prices for both WTI and Brent crude oil. The specific series used were DCOILWTICO for WTI and DCOILBRENTEU for Brent, both measured in U.S. dollars per barrel. The dataset spans from January 2000 through early 2026, providing over two decades of observations.  
+The data used in this analysis was obtained from the FRED API, which provides daily spot prices for both WTI and Brent crude oil. The specific series used were DCOILWTICO for WTI and DCOILBRENTEU for Brent, both measured in U.S. dollars per barrel. The dataset spans from January 2000 through early 2026, providing over two decades of observations. 
 
 Before performing any analysis, the data required several preprocessing steps. First, the raw values were converted into numeric format, with any non-numeric entries were turned into missing values. Dates were parsed into a standard datetime format to allow for proper time series analysis. The two datasets were then merged on the date column to align observations across both benchmarks.  
 
@@ -27,7 +27,7 @@ To assess the relationship between the two benchmarks, a 60-day rolling correlat
 
 Finally, a volatility regime indicator was created by identifying periods where rolling volatility exceeds the 75th percentile. This allows for the classification of high-volatility environments and helps highlight periods of market stress. 
 
-The limitations of my project also need to be mentioned. Firstly, FRED provides spot price data, not futures curves, so it reflects current market conditions rather than forward-looking expectations or risk premiums. There’s no adjustment for inflation or currency effects. Also, my analysis is purely descriptive (no predictive modeling). And another big piece I’ve mentioned was the forward-fill, which assumes price continuity across non-trading days.  
+The limitations of my project also need to be mentioned. Firstly, FRED provides spot price data, not futures curves, so it reflects current market conditions rather than forward-looking expectations or risk premiums. There’s no adjustment for inflation or currency effects. Also, this is still mostly descriptive work (no formal causal modeling). I’m only using spot prices, and forward-filling non-trading days is a reasonable but imperfect choice. There’s also only so much you can separate storage effects, transport issues, and geopolitics using benchmark prices alone. All of these are real constraints on how deep the conclusions can go. 
 
 **Exploratory Analysis**
 
@@ -43,7 +43,7 @@ The distribution of daily returns further highlights the presence of extreme eve
 
 Seasonality analysis, based on grouping returns by month, suggests that there is no strong or consistent seasonal pattern in oil returns. While certain months exhibit more variability than others, these effects are relatively minor compared to the impact of major economic or geopolitical events. 
 
-Finally, the identification of high-volatility regimes shows that periods of market stress are not isolated events but tend to cluster over time. This reinforces the idea that financial markets exhibit persistent periods of instability, rather than purely random fluctuations. 
+Additionally, the identification of high-volatility regimes shows that periods of market stress are not isolated events but tend to cluster over time. This reinforces the idea that financial markets exhibit persistent periods of instability, rather than purely random fluctuations. 
 
 **Conclusion**
 
