@@ -21,7 +21,7 @@ Because financial time series often contain gaps due to weekends and holidays, m
 
 To better understand the relationship between Brent and WTI, several derived variables were constructed. The most important of these is the spread, defined as the difference between Brent and WTI prices. This variable captures the divergence between the two benchmarks and serves as the central focus of the analysis. 
 
-Daily returns were also calculated to measure relative price changes over time. Both simple returns and log returns were computed, with log returns offering better mathematical properties for statistical analysis. In addition, rolling volatility was calculated using a 20-day window, allowing for the examination of how market risk evolves over time. I included the log returns for some more financial rigor and to more accurately stabilize large price movements. Log returns by nature are additive over time which makes them useful for time series models and specifically for volatility calculations 
+Daily returns were also calculated to measure relative price changes over time. Both simple returns and log returns were computed. I included the log returns for some more financial rigor and to more accurately stabilize large price movements. Log returns by nature are additive over time which makes them useful for time series models and specifically for volatility calculations. In addition, rolling volatility was calculated using a 20-day window, allowing for the examination of how market risk evolves over time. 
 
 To assess the relationship between the two benchmarks, a 60-day rolling correlation was computed based on returns. This provides a dynamic view of how closely Brent and WTI move together across different market conditions. A relative spread measure was also introduced by scaling the spread by the WTI price, making it easier to compare spread magnitudes across different price levels. 
 
@@ -31,11 +31,11 @@ The limitations of my project also need to be mentioned. Firstly, FRED provides 
 
 **Exploratory Analysis**
 
-The time series of crude oil prices reveals several important patterns. Brent and WTI prices generally track each other closely, confirming that they are driven by similar underlying economic forces. However, there are notable periods where prices diverge or exhibit extreme behavior. For example, both benchmarks experienced a sharp rise leading up to the 2008 financial crisis, followed by a dramatic collapse. Another significant disruption occurred in 2020 during the COVID-19 pandemic, when demand shocks and storage constraints caused unprecedented market conditions. Notably, WTI prices briefly turned negative during this period, reflecting the cost of storage exceeding the value of the commodity itself. The transportation sector drives demand for refined petroleum products (e.g., gasoline, diesel, jet fuel), which dropped during the lockdown. I highlight COVID as it was a unique point in history during which humans demanded 30% less oil/gas.  Brent is seaborne so I suspect storage wasn’t as difficult as with WTI. 
+The time series of crude oil prices reveals several important patterns. Brent and WTI prices generally track each other closely, confirming that they are driven by similar underlying economic forces. However, there are notable periods where prices diverge or exhibit extreme behavior. For example, both benchmarks experienced a sharp rise leading up to the 2008 financial crisis, followed by a dramatic collapse. Another significant disruption occurred in 2020 during the COVID-19 pandemic, when demand shocks and storage constraints caused unprecedented market conditions. Notably, WTI prices briefly turned negative during this period, reflecting the cost of storage exceeding the value of the commodity itself. The transportation sector drives demand for refined petroleum products (e.g., gasoline, diesel, jet fuel), which dropped during the lockdown. I highlight COVID as it was a unique point in history during which humans demanded 30% less oil/gas.  Brent is seaborn so I suspect storage wasn’t as difficult as with WTI (i.e Brent is stored and shipped via coastal terminals and tankers whereas WTI is landlocked at Cushing, Oklahoma, which made storage constraints far worse during the 2020 crash). 
 
-The Brent–WTI spread provides further insight into these dynamics. For most of the sample period, the spread remains relatively small, suggesting that the two benchmarks are closely linked. However, there are several episodes where the spread widens significantly. One such period occurs between 2011 and 2013, likely driven by infrastructure bottlenecks in the United States that limited the ability to transport oil efficiently. Another major spike occurs during the COVID-19 crisis, highlighting how extreme market disruptions can temporarily decouple the two benchmarks. 
+The Brent–WTI spread provides further insight into these dynamics. For most of the sample period, the spread remains relatively small, suggesting that the two benchmarks are closely linked. However, there are several episodes where the spread widens significantly. One such period occurs between 2011 and 2013, likely driven by infrastructure bottlenecks in the United States that limited the ability to transport oil efficiently. 
 
-The rolling correlation analysis reinforces this interpretation. While the correlation between Brent and WTI is generally high, it declines sharply during periods of market stress. This suggests that although the two benchmarks are typically driven by common factors, their relationship can weaken when markets experience structural shocks or dislocations. 
+The rolling correlation analysis reinforces this interpretation. While the correlation between Brent and WTI is generally high, it declines sharply during periods of market stress. This suggests that although the two benchmarks are typically driven by common factors, their relationship can weaken when markets experience structural shocks. 
 
 Volatility analysis reveals a similar pattern. For most of the sample period, volatility remains relatively low and stable. However, it increases dramatically during crisis periods, particularly in 2008 and 2020. These spikes illustrate the concept of “volatility clustering”, where periods of high volatility tend to be followed by additional high-volatility periods. Interestingly, WTI volatility tends to spike more sharply than Brent, most likely reflecting its greater exposure to localized factors such as storage and transportation constraints. 
 
@@ -63,9 +63,6 @@ During an interview, I mentioned that I have a background in commodities (I was 
 
 [Current Brent-WTI spread (interesting time to be doing this project) 
 ](https://www.reuters.com/business/energy/us-oil-exports-seen-rising-wti-discount-brent-hits-widest-11-years-2026-03-18/)
- 
-
-
 
 [FRED API Version 2 ](https://fred.stlouisfed.org/docs/api/fred/ )
 
@@ -75,4 +72,5 @@ During an interview, I mentioned that I have a background in commodities (I was 
 
 https://oilprice.com/    
 
-I'd also like to add that the app.py was my attempt to use streamlit to create an interactive website/app related to my data. It's pretty elementary and I needed **A LOT** of help with it, so honestly it should be taken with a grain of salt, which is why I include its description very briefly here in the appendix. I got a lot of help from my brother + the internet.  
+
+I'd also like to add that the app.py was my attempt to use streamlit to create an interactive website/app related to my data. It's pretty elementary and I needed **A LOT** of help with it, so honestly it should be taken with a grain of salt, which is why I include its description very briefly here in the appendix. I got a lot of help from my brother + the internet. But I wanted to let you select a date range and interactively explore the Brent and WTI price series along with a basic rolling-correlation view. 
